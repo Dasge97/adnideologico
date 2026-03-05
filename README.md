@@ -86,3 +86,8 @@ npm run dev
 - `bd/` SQL de inicializacion y parches de neutralidad
 - `observability/` configuraciones de Prometheus/Grafana/Loki
 
+## Testing
+
+Guia completa de testeo:
+
+- `TESTING.md`
