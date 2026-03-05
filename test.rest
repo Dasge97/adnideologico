@@ -1,0 +1,312 @@
+@baseUrl = http://localhost:3001
+@prometheusUrl = http://localhost:9090
+@grafanaUrl = http://localhost:3000
+@lokiUrl = http://localhost:3100
+
+###
+# 0) Health API
+GET {{baseUrl}}/api/health
+
+###
+# 1) Create session
+# @name create_session
+POST {{baseUrl}}/api/session
+Content-Type: application/json
+
+{
+  "user_agent": "rest-client-test"
+}
+
+###
+# 2) List questions
+# @name list_questions
+GET {{baseUrl}}/api/questions
+
+###
+# 3) Submit 36 answers (full test)
+# Session: {{create_session.response.body.$.session_id}}
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 1, "value": 6 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 2, "value": 5 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 3, "value": 3 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 4, "value": 6 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 5, "value": 5 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 6, "value": 6 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 7, "value": 3 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 8, "value": 6 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 9, "value": 6 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 10, "value": 2 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 11, "value": 5 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 12, "value": 5 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 13, "value": 6 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 14, "value": 3 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 15, "value": 5 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 16, "value": 4 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 17, "value": 6 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 18, "value": 3 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 19, "value": 5 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 20, "value": 4 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 21, "value": 3 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 22, "value": 5 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 23, "value": 4 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 24, "value": 3 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 25, "value": 6 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 26, "value": 3 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 27, "value": 5 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 28, "value": 4 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 29, "value": 6 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 30, "value": 5 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 31, "value": 6 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 32, "value": 5 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 33, "value": 3 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 34, "value": 5 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 35, "value": 6 }
+
+###
+POST {{baseUrl}}/api/answer
+Content-Type: application/json
+
+{ "session_id": "{{create_session.response.body.$.session_id}}", "question_id": 36, "value": 4 }
+
+###
+# 4) Finish session
+# @name finish_session
+POST {{baseUrl}}/api/finish
+Content-Type: application/json
+
+{
+  "session_id": "{{create_session.response.body.$.session_id}}"
+}
+
+###
+# 5) Idempotent finish check (should return 200 with same score structure)
+POST {{baseUrl}}/api/finish
+Content-Type: application/json
+
+{
+  "session_id": "{{create_session.response.body.$.session_id}}"
+}
+
+###
+# 6) AI analysis (requires Ollama model already pulled)
+# @name ai_analysis
+POST {{baseUrl}}/api/ai-analysis
+Content-Type: application/json
+
+{
+  "session_id": "{{create_session.response.body.$.session_id}}"
+}
+
+###
+# 7) Send feedback
+POST {{baseUrl}}/api/feedback
+Content-Type: application/json
+
+{
+  "session_id": "{{create_session.response.body.$.session_id}}",
+  "message": "El resultado fue interesante y bastante coherente con mis prioridades."
+}
+
+###
+# 8) Analytics endpoints
+GET {{baseUrl}}/api/analytics/summary
+
+###
+GET {{baseUrl}}/api/analytics/timeseries?days=30
+
+###
+GET {{baseUrl}}/api/analytics/consensus
+
+###
+GET {{baseUrl}}/api/analytics/combinations?limit=10
+
+###
+GET {{baseUrl}}/api/analytics/overview
+
+###
+# 9) Prometheus metrics scrape target
+GET {{baseUrl}}/metrics
+
+###
+# 10) Infra health checks
+GET {{prometheusUrl}}/-/healthy
+
+###
+GET {{grafanaUrl}}/api/health
+
+###
+GET {{lokiUrl}}/ready
