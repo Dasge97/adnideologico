@@ -84,10 +84,14 @@ npm run dev
 - `frontend/` interfaz de usuario y flujo del test
 - `backend/` API, scoring, narrativa IA, analytics y metrics
 - `bd/` SQL de inicializacion y parches de neutralidad
-- `observability/` configuraciones de Prometheus/Grafana/Loki
+- `observability/` configuraciones de Prometheus/Grafana/Loki (con guia en `observability/README.md`)
 
-## Testing
+## Documentacion
 
 Guia completa de testeo:
 
 - `TESTING.md`
+
+Guia completa de observabilidad:
+
+- `observability/README.md`
